@@ -1,0 +1,47 @@
+.page {
+    margin: 2rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 24px;
+}
+
+.card:hover {
+    border-color: #288cff;
+    color: #288cff;
+}
+
+.card-body {
+    font-size: 1rem;
+    color: #495057;
+}
+
+footer {
+    margin-top: 2rem;
+    font-size: .8rem;
+}
+
+nav {
+    background-color: var(--secondary);
+    width: 16rem;
+    position: fixed;
+    right: 2rem;
+}
+nav ul {
+    padding: 0 1rem;
+}
+nav li {
+    list-style: none;
+}
+nav li a {
+    padding: .5rem 0;
+    width: 100%;
+    display: inline-block;
+}
