@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <title>Accessibility Library</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet" /> 
+    <link type="text/css" href="assets/css/theme.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/main.css" rel="stylesheet" />
+    <style type="text/css">
+        button[aria-disabled] {
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header>
+            <a href="/" class="title text-dark">Accessibility Library</a>
+            <div class="lvivcss-logo">
+                <img src="./assets/images/lviv-css-logo.png" alt="" height="24" />
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Aria attributes</a></li>
+                <li><a href="#">Live example</a></li>
+                <li><a href="#">Code sample</a></li>
+            </ul>
+        </nav>
+        
+        <main>
+            <h1>Form buttons</h1>    
+            <p>
+                The label of a <b>button</b> element is set inside the element and can include markup. This allows more advanced accessibility hints to be included, like marking up language change.
+            </p>
+
+            <h2 class="mt-sm">Aria attributes</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>aria-disabled</code></td>
+                    <td>Indicates when the action associated with a button is unavailable.</td>
+                </tr>
+                <tr>
+                    <td><code>aria-pressed</code></td>
+                    <td>Indicates when the button is toggled on.</td>
+                </tr>                
+
+                aria-pressed 
+            </table>
+        
+            <h2 class="mt-sm">Live Example</h2>
+            <section>
+<form>
+    <input type="text" name="name" required="" aria-label="First name"><br><br>
+    <button type="submit" aria-disabled="true">Submit</button>
+    <button>Cancel</button>
+</form>
+            </section>
+
+            <h2 class="mt-sm">Code sample</h2>
+            <section>
+
+<pre style="color:#000000;background:#ffffff;"><span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">form</span><span style="color:#a65700; ">&gt;</span>
+    <span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">input</span><span style="color:#274796; "> </span><span style="color:#074726; ">type</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"text"</span><span style="color:#274796; "> </span><span style="color:#074726; ">name</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"name"</span><span style="color:#274796; "> </span><span style="color:#074726; ">required</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">""</span><span style="color:#274796; "> aria-</span><span style="color:#074726; ">label</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"First name"</span><span style="color:#a65700; ">&gt;</span><span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">br</span><span style="color:#a65700; ">&gt;</span><span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">br</span><span style="color:#a65700; ">&gt;</span>
+    <span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">button</span><span style="color:#274796; "> </span><span style="color:#074726; ">type</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"submit"</span><span style="color:#274796; "> aria-</span><span style="color:#074726; ">disabled</span><span style="color:#808030; ">=</span><span style="color:#0000e6; ">"true"</span><span style="color:#a65700; ">&gt;</span>Submit<span style="color:#a65700; ">&lt;/</span><span style="color:#800000; font-weight:bold; ">button</span><span style="color:#a65700; ">&gt;</span>
+    <span style="color:#a65700; ">&lt;</span><span style="color:#800000; font-weight:bold; ">button</span><span style="color:#a65700; ">&gt;</span>Cancel<span style="color:#a65700; ">&lt;/</span><span style="color:#800000; font-weight:bold; ">button</span><span style="color:#a65700; ">&gt;</span>
+<span style="color:#a65700; ">&lt;/</span><span style="color:#800000; font-weight:bold; ">form</span><span style="color:#a65700; ">&gt;</span>
+</pre>
+
+            </section>
+
+        </main>
+
+        <footer>
+            Accessibility Library created by <mark>YOUR NAME</mark> on LvivCSS'19.
+        </footer>
+    </div>
+</body>
+</html>
