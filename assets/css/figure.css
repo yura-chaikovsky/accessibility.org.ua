@@ -1,0 +1,17 @@
+.figure-article {
+    max-width: 500px;
+}
+
+.figure-card {
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.figure-card:last-child {
+    margin-top: 15px;
+}
+
+.figure-image {
+    width: 400px;
+    height: auto;
+}
