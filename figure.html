@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <title>Accessibility Library</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700" rel="stylesheet"/>
+    <link type="text/css" href="assets/css/theme.css" rel="stylesheet"/>
+    <link type="text/css" href="assets/css/main.css" rel="stylesheet"/>
+    <link type="text/css" href="assets/css/figure.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page">
+    <header>
+        <a href="/" class="title text-dark">Accessibility Library</a>
+        <div class="lvivcss-logo">
+            <img src="./assets/images/lviv-css-logo.png" alt="Lviv CSS logo image" height="24"/>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#aria-attributes">Aria attributes</a></li>
+            <li><a href="#live-example">Live example</a></li>
+            <li><a href="#code-sample">Code sample</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Figure</h1>
+        <p>
+            Used for element grouping, for example, images and captions.
+        </p>
+
+        <h2 id="aria-attributes" class="mt-sm">Aria attributes</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>aria-label</code></td>
+                <td>If there is no element containing text that could serve as a label, you can add the label directly
+                    as a value on the aria-label on the element with the figure role or on the &lt;figure&gt; element.
+                </td>
+            </tr>
+            <tr>
+                <td><code>aria-describedby</code></td>
+                <td>The id of an element containing reference text serving as a caption.</td>
+            </tr>
+            <tr>
+                <td><code>aria-labeledby</code></td>
+                <td>The id of an element containing text serving as a label.</td>
+            </tr>
+        </table>
+
+        <h2 id="live-example" class="mt-sm">Live Example</h2>
+        <section>
+            <article class="figure-article">
+                <figure class="figure-card">
+                    <p><img class="figure-image" src="./assets/images/lviv-css-logo.png" alt="figure 1 image"></p>
+                    <figcaption class="figure-description">Description for figure 1</figcaption>
+                </figure>
+                <figure class="figure-card">
+                    <p><img class="figure-image" src="./assets/images/lviv-css-logo.png" alt="figure 2 image"></p>
+                    <figcaption class="figure-description">Description for figure 2</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <h2 id="code-sample" class="mt-sm">Code sample</h2>
+        <section>
+
+
+            <pre style="color:#000000;background:#ffffff;"><span style="color:#a65700; ">&lt;</span><span
+                    style="color:#800000; font-weight:bold; ">article</span><span style="color:#a65700; ">&gt;</span>
+                <span style="color:#a65700; ">&lt;</span><span
+                        style="color:#800000; font-weight:bold; ">figure</span><span style="color:#a65700; ">&gt;</span>
+                    <span style="color:#a65700; ">&lt;</span><span style="color:#5f5035; ">p</span><span
+                        style="color:#a65700; ">&gt;</span><span style="color:#a65700; ">&lt;</span><span
+                        style="color:#5f5035; ">img</span> <span style="color:#274796; ">src</span><span
+                        style="color:#808030; ">=</span><span style="color:#800000; ">"</span><span
+                        style="color:#0000e6; ">example.png</span><span style="color:#800000; ">"</span> <span
+                        style="color:#274796; ">alt</span><span style="color:#808030; ">=</span><span
+                        style="color:#800000; ">"</span><span style="color:#0000e6; ">figure 1 image</span><span
+                        style="color:#800000; ">"</span><span style="color:#a65700; ">&gt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">&lt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">/</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">p</span><span
+                        style="color:#a65700; ">&gt;</span>
+                    <span style="color:#a65700; ">&lt;</span><span style="color:#5f5035; ">figcaption</span><span
+                        style="color:#a65700; ">&gt;</span>Description for figure 1<span
+                        style="color:#a65700; ">&lt;/</span><span style="color:#5f5035; ">figcaption</span><span
+                        style="color:#a65700; ">&gt;</span>
+                <span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">&lt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">/</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">f</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">i</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">g</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">u</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">r</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">e</span><span
+                        style="color:#a65700; ">&gt;</span>
+                <span style="color:#a65700; ">&lt;</span><span style="color:#5f5035; ">figure</span><span
+                        style="color:#a65700; ">&gt;</span>
+                    <span style="color:#a65700; ">&lt;</span><span style="color:#5f5035; ">p</span><span
+                        style="color:#a65700; ">&gt;</span><span style="color:#a65700; ">&lt;</span><span
+                        style="color:#5f5035; ">img</span> <span style="color:#274796; ">src</span><span
+                        style="color:#808030; ">=</span><span style="color:#800000; ">"</span><span
+                        style="color:#0000e6; ">example.png</span><span style="color:#800000; ">"</span> <span
+                        style="color:#274796; ">alt</span><span style="color:#808030; ">=</span><span
+                        style="color:#800000; ">"</span><span style="color:#0000e6; ">figure 2 image</span><span
+                        style="color:#800000; ">"</span><span style="color:#a65700; ">&gt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">&lt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">/</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">p</span><span
+                        style="color:#a65700; ">&gt;</span>
+                    <span style="color:#a65700; ">&lt;</span><span style="color:#5f5035; ">figcaption</span><span
+                        style="color:#a65700; ">&gt;</span>description for figure 2<span
+                        style="color:#a65700; ">&lt;/</span><span style="color:#5f5035; ">figcaption</span><span
+                        style="color:#a65700; ">&gt;</span>
+                <span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">&lt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">/</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">f</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">i</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">g</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">u</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">r</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">e</span><span
+                        style="color:#a65700; ">&gt;</span>
+            <span style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">&lt;</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">/</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">a</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">r</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">t</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">i</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">c</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">l</span><span
+                        style="color:#ffffff; background:#dd0000; font-weight:bold; font-style:italic; ">e</span><span
+                        style="color:#a65700; ">&gt;</span>
+            </pre>
+
+
+        </section>
+
+    </main>
+
+    <footer>
+        Accessibility Library created by
+        <mark>Petro Kryvolap</mark>
+        on LvivCSS'19.
+    </footer>
+</div>
+</body>
+</html>
+
