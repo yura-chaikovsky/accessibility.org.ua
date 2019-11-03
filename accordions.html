@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>Accessibility Library</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800|Roboto:400,500,700"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="assets/css/theme.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/main.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/accordion.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <a href="/" class="title text-dark"
+          >Accessibility Library</a
+        >
+        <div class="lvivcss-logo">
+          <img src="./assets/images/lviv-css-logo.png" alt="" height="24" />
+        </div>
+      </header>
+
+      <nav>
+        <ul>
+          <li><a href="#">Aria attributes</a></li>
+          <li><a href="#">Live example</a></li>
+          <li><a href="#">Code sample</a></li>
+        </ul>
+      </nav>
+
+      <main>
+        <h1>Accordion</h1>
+        <p>
+          An accordion is a vertically stacked set of interactive headings that each contain a title, content snippet, or thumbnail representing a section of content. The headings function as controls that enable users to reveal or hide their associated sections of content. Accordions are commonly used to reduce the need to scroll when presenting multiple sections of content on a single page.
+        </p>
+
+        <h2 class="mt-sm">Aria attributes</h2>
+        <table>
+          <tr>
+            <th>Accordions</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>aria-expanded</code></td>
+            <td>
+              Set to true when the Accordion panel is expanded, otherwise set to false.
+            </td>
+          </tr>
+          <tr>
+            <td><code>aria-controls</code></td>
+            <td>
+              Points to the ID of the panel which the header controls.
+            </td>
+          </tr>
+          <tr>
+            <td><code>aria-disabled</code></td>
+            <td>
+              If the accordion panel is expanded and is not allowed to be collapsed, then set to true.
+            </td>
+          </tr>
+          <tr>
+            <td><code>aria-labelledby</code></td>
+            <td>
+              <ul>
+                <li>
+                  Defines the accessible name for the <code>region</code> element.
+                </li>
+                <li>
+                  References the accordion header button that expands and collapses the <code>region</code>.
+                </li>
+                <li>
+                  <code>region</code> elements are required to have an accessible name to be identified as a landmark.
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <h2 class="mt-sm">Live Example</h2>
+        <section>
+          <div id="accordion" class="Accordion">
+            <h3>
+              <button class="Accordion-trigger" aria-expanded="true" aria-controls="section1" aria-disabled="true" id="accordion1">
+                <span class="Accordion-title">First</span>
+                <span class="Accordion-icon"></span>
+              </button>
+            </h3>
+
+            <div id="section1" class="Accordion-panel" aria-labelledby="accordion1" role="region">
+              <span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </span>
+            </div>
+
+            <h3>
+              <button class="Accordion-trigger" aria-expanded="false" aria-controls="section2" id="accordion2">
+                <span class="Accordion-title">Second</span>
+                <span class="Accordion-icon"></span>
+              </button>
+            </h3>
+
+            <div id="section2" class="Accordion-panel" aria-labelledby="accordion2" role="region" hidden>
+              <span>
+                Dui nunc mattis enim ut. Sodales ut etiam sit amet nisl. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida. Volutpat sed cras ornare arcu dui. Egestas integer eget aliquet nibh praesent tristique magna. Neque gravida in fermentum et sollicitudin ac. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Vulputate eu scelerisque felis imperdiet proin. Id donec ultrices tincidunt arcu non sodales neque sodales ut. Tempor nec feugiat nisl pretium fusce id velit.
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="mt-sm">Code sample</h2>
+        <section>
+          <pre><code>
+&lt;div id=&quot;accordion&quot; class=&quot;Accordion&quot;&gt;
+  &lt;h3&gt;
+    &lt;button class=&quot;Accordion-trigger&quot; aria-expanded=&quot;true&quot; aria-controls=&quot;section1&quot; aria-disabled=&quot;true&quot; id=&quot;accordion1&quot;&gt;
+      &lt;span class=&quot;Accordion-title&quot;&gt;First&lt;/span&gt;
+      &lt;span class=&quot;Accordion-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/h3&gt;
+
+  &lt;div id=&quot;section1&quot; class=&quot;Accordion-panel&quot; aria-labelledby=&quot;accordion1&quot; role=&quot;region&quot;&gt;
+    &lt;span&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    &lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;h3&gt;
+    &lt;button class=&quot;Accordion-trigger&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;section2&quot; id=&quot;accordion2&quot;&gt;
+      &lt;span class=&quot;Accordion-title&quot;&gt;Second&lt;/span&gt;
+      &lt;span class=&quot;Accordion-icon&quot;&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/h3&gt;
+
+  &lt;div id=&quot;section2&quot; class=&quot;Accordion-panel&quot; aria-labelledby=&quot;accordion2&quot; role=&quot;region&quot; hidden&gt;
+    &lt;span&gt;
+      Dui nunc mattis enim ut. Sodales ut etiam sit amet nisl. Bibendum ut tristique et egestas quis ipsum suspendisse ultrices gravida. Volutpat sed cras ornare arcu dui. Egestas integer eget aliquet nibh praesent tristique magna. Neque gravida in fermentum et sollicitudin ac. Maecenas ultricies mi eget mauris pharetra et ultrices neque. Vulputate eu scelerisque felis imperdiet proin. Id donec ultrices tincidunt arcu non sodales neque sodales ut. Tempor nec feugiat nisl pretium fusce id velit.
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+          </code></pre>
+        </section>
+      </main>
+
+      <footer>
+        Accessibility Library created by <mark>Yaroslav Shamatienko</mark> on LvivCSS'19.
+      </footer>
+    </div>
+
+    <script src="./accordion.js"></script>
+  </body>
+</html>
